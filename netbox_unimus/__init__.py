@@ -1,7 +1,7 @@
 from extras.plugins import PluginConfig
 
 
-class Unimus(PluginConfig):
+class UnimusIntegration(PluginConfig):
     name = "netbox_unimus"
     verbose_name = "Unimus Integration"
     description = "Integrates Netbox and Unimus"
@@ -14,4 +14,4 @@ class Unimus(PluginConfig):
     default_settings = {}
 
 
-config = Unimus
+config = UnimusIntegration
