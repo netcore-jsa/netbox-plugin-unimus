@@ -5,4 +5,10 @@ from extras.models import ChangeLoggedModel
 class UnimusIntegration(ChangeLoggedModel):
     Unimus_Address = models.URLField()
     API_Token = models.TextField(validators=[RegexValidator(regex='^.{101}$', message='Length has to be 101', code='nomatch')])
-    Use_SSL = models.BooleanField(default = False)
+    Verify_Certificate = models.BooleanField(default=False)
+    Test = models.BooleanField(default=True)
+
+    def clean_task_for(self):
+        data = self.clean_task_for('task_for')
+        if 'rhone' in data:
+            raise()
