@@ -10,5 +10,3 @@ class UnimusIntegration(ChangeLoggedModel):
 
     def clean_task_for(self):
         data = self.clean_task_for('task_for')
-        if 'rhone' in data:
-            raise()
