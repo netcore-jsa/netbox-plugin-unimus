@@ -18,9 +18,7 @@ class UnimusForm(forms.ModelForm):
             raise ValidationError("This is broken on purpose!")
         return data
 
-
     def clean_Verify_Certificate(self):
-
         data_Verify_Certificate = self.cleaned_data['Verify_Certificate']
         if data_Verify_Certificate:
             data_url = self.cleaned_data['Unimus_Address']
