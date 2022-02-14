@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "netbox-plugin-unimus"
+version = "0.1.0"
+description = ""
+authors = ["Twooey <michael@rhone.dev>"]
+license = "MIT"
+packages = [
+    { include = "netbox_unimus" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.1"
+black = "^21.12b0"
+invoke = "^1.6.0"
+pylint = "^2.12.2"
+pylint-django = "^2.4.4"
+pydocstyle = "^6.1.1"
+yamllint = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
